@@ -165,35 +165,6 @@ cc_test(
     ],
 )
 
-cc_test(
-    name = "http_rest_api_handler_test",
-    size = "medium",
-    srcs = ["http_rest_api_handler_test.cc"],
-    data = [
-        "//tensorflow_serving/servables/tensorflow/testdata:saved_model_half_plus_two_2_versions_metadata.json",
-        "@org_tensorflow//tensorflow/cc/saved_model:saved_model_half_plus_two",
-    ],
-    deps = [
-        ":http_rest_api_handler",
-        ":model_platform_types",
-        ":platform_config_util",
-        ":server_core",
-        "//tensorflow_serving/core:availability_preserving_policy",
-        "//tensorflow_serving/core/test_util:test_main",
-        "//tensorflow_serving/servables/tensorflow:saved_model_bundle_source_adapter_proto",
-        "//tensorflow_serving/servables/tensorflow:session_bundle_config_proto",
-        "//tensorflow_serving/servables/tensorflow:session_bundle_source_adapter_proto",
-        "//tensorflow_serving/test_util",
-        "@com_github_tencent_rapidjson//:rapidjson",
-        "@com_google_absl//absl/strings",
-        "@com_google_absl//absl/time",
-        "@com_googlesource_code_re2//:re2",
-        "@org_tensorflow//tensorflow/cc/saved_model:loader",
-        "@org_tensorflow//tensorflow/cc/saved_model:signature_constants",
-        "@org_tensorflow//tensorflow/core:lib",
-        "@org_tensorflow//tensorflow/core:test",
-    ],
-)
 
 cc_library(
     name = "model_service_impl",
@@ -302,6 +273,7 @@ cc_library(
 SUPPORTED_TENSORFLOW_OPS = [
     "@org_tensorflow//tensorflow/contrib:contrib_kernels",
     "@org_tensorflow//tensorflow/contrib:contrib_ops_op_lib",
+    "//tensorflow_serving/EasyCTR:assembler_ops",  # Add this line
 ]
 
 TENSORFLOW_DEPS = [
