@@ -362,24 +362,24 @@ cc_test(
     ],
 )
 
-cc_test(
-    name = "json_tensor_test",
-    srcs = ["json_tensor_test.cc"],
-    deps = [
-        ":json_tensor",
-        "//tensorflow_serving/apis:classification_proto",
-        "//tensorflow_serving/apis:model_proto",
-        "//tensorflow_serving/apis:predict_proto",
-        "//tensorflow_serving/apis:regression_proto",
-        "//tensorflow_serving/core/test_util:test_main",
-        "//tensorflow_serving/test_util",
-        "@org_tensorflow//tensorflow/core:framework",
-        "@org_tensorflow//tensorflow/core:lib",
-        "@org_tensorflow//tensorflow/core:protos_all_cc",
-        "@org_tensorflow//tensorflow/core:test",
-        "@protobuf_archive//:protobuf",
-    ],
-)
+#cc_test(
+#    name = "json_tensor_test",
+#    srcs = ["json_tensor_test.cc"],
+#    deps = [
+#        ":json_tensor",
+#        "//tensorflow_serving/apis:classification_proto",
+#        "//tensorflow_serving/apis:model_proto",
+#        "//tensorflow_serving/apis:predict_proto",
+#        "//tensorflow_serving/apis:regression_proto",
+#        "//tensorflow_serving/core/test_util:test_main",
+#        "//tensorflow_serving/test_util",
+#        "@org_tensorflow//tensorflow/core:framework",
+#        "@org_tensorflow//tensorflow/core:lib",
+#        "@org_tensorflow//tensorflow/core:protos_all_cc",
+#        "@org_tensorflow//tensorflow/core:test",
+#        "@protobuf_archive//:protobuf",
+#    ],
+#)
 
 load("//tensorflow_serving:serving.bzl", "serving_proto_library")
 load("//tensorflow_serving:serving.bzl", "serving_proto_library_py")
