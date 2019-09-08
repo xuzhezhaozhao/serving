@@ -148,10 +148,11 @@ cc_test(
     srcs = ["fast_read_dynamic_ptr_benchmark.cc"],
     deps = [
         ":fast_read_dynamic_ptr",
+        "@com_google_absl//absl/time",
         "@org_tensorflow//tensorflow/core:lib",
         "@org_tensorflow//tensorflow/core:tensorflow",
         "@org_tensorflow//tensorflow/core:test",
-        "@org_tensorflow//tensorflow/core/kernels/batching_util:periodic_function",
+        "@org_tensorflow//tensorflow/core/kernels/batching_util:periodic_function_dynamic",
     ],
 )
 
@@ -347,6 +348,7 @@ cc_library(
         "//tensorflow_serving/apis:regression_proto",
         "@com_github_tencent_rapidjson//:rapidjson",
         "@com_google_absl//absl/strings",
+        "@com_google_absl//absl/strings:str_format",
         "@org_tensorflow//tensorflow/core:framework",
         "@org_tensorflow//tensorflow/core:lib",
         "@org_tensorflow//tensorflow/core:protos_all_cc",

@@ -33,6 +33,9 @@ extern const char* const kMain;
 // Graphics processing unit(s).
 extern const char* const kGpu;
 
+// TPU(s).
+extern const char* const kTpu;
+
 }  // namespace device_types
 
 // Standard resource kinds.
@@ -44,6 +47,12 @@ extern const char* const kNumModelSlots;
 
 // RAM in bytes.
 extern const char* const kRamBytes;
+
+// RAM allocated on the heap.
+extern const char* const kHeapRamBytes;
+
+// RAM reserved on the stack.
+extern const char* const kStackRamBytes;
 
 // Fraction of a processing unit's cycles, in thousandths.
 extern const char* const kProcessingMillis;
