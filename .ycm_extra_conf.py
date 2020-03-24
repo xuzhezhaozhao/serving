@@ -88,6 +88,8 @@ flags = [
 '/home/xzz/anaconda2/lib/python2.7/site-packages/tensorflow/include/external/nsync/public',
 # '-I',
 # './ClangCompleter',
+'-I',
+'/home/xzz/.cache/bazel/_bazel_xzz/f71bc2e28bdaf1e5eab4ae86fa49187c/execroot/tf_serving/bazel-out/k8-opt/bin/',
 
 # System include
 # '-isystem',
