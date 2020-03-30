@@ -1,0 +1,9 @@
+
+export http_proxy=http://web-proxy.tencent.com:8080
+export https_proxy=http://web-proxy.tencent.com:8080
+export ftp_proxy=http://web-proxy.tencent.com:8080
+export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,git.code.oa.com"
+export HTTP_PROXY=http://web-proxy.tencent.com:8080
+export HTTPS_PROXY=http://web-proxy.tencent.com:8080
+export FTP_PROXY=http://web-proxy.tencent.com:8080
+export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com,git.code.oa.com"
