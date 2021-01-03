@@ -6,7 +6,7 @@ bazel build \
     --copt=-mfma \
     --copt=-mfpmath=both \
     --copt=-msse4.2  \
-    --jobs 1  \
+    --jobs 2  \
     --local_ram_resources=2048 \
     tensorflow_serving/...
 
