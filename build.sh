@@ -1,1 +1,13 @@
-bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2  tensorflow_serving/... --jobs 3  --local_ram_resources=4096 # --incompatible_disallow_data_transition=false
+bazel build \
+    -c opt \
+    --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
+    --copt=-mavx \
+    --copt=-mavx2 \
+    --copt=-mfma \
+    --copt=-mfpmath=both \
+    --copt=-msse4.2  \
+    --jobs 1  \
+    --local_ram_resources=2048 \
+    tensorflow_serving/...
+
+# --incompatible_disallow_data_transition=false

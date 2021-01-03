@@ -273,7 +273,7 @@ cc_library(
 SUPPORTED_TENSORFLOW_OPS = [
     "@org_tensorflow//tensorflow/contrib:contrib_kernels",
     "@org_tensorflow//tensorflow/contrib:contrib_ops_op_lib",
-    "//tensorflow_serving/EasyCTR:assembler_ops",  # Add this line
+    "//tensorflow_serving/easyctr:assembler_ops",  # Add this line
 ]
 
 TENSORFLOW_DEPS = [
